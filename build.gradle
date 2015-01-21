@@ -1,0 +1,47 @@
+apply plugin: 'eclipse'
+apply plugin: 'java'
+
+
+jar {
+  manifest {
+    attributes 'Main-Class': 'com.cloudwise.smartagent.framework.Main'
+  }
+}
+
+task copyTask(type: Copy) {
+    from 'build/libs/*'
+    into 'build/resources/main'
+}
+
+task copyTaskWithPatterns(type: Copy) {
+    from 'build/libs/*'
+    into 'build/resources/main'
+    include '**/*.jar'
+    include '**/*.jsp'
+}
+
+task libs(type: Sync) {
+    from configurations.runtime
+    into "$buildDir/libs"
+}
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
+dependencies {
+  compile 'org.apache.felix:org.apache.felix.framework:4.2.1'
+  compile 'log4j:log4j:1.2.17'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-release" }
+}

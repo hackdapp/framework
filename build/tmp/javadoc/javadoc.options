@@ -1,0 +1,7 @@
+-classpath '/Users/nolan/Desktop/workmeta/framework/build/classes/main:/Users/nolan/Desktop/workmeta/framework/build/resources/main:/Users/nolan/.gradle/caches/modules-2/files-2.1/org.apache.felix/org.apache.felix.framework/4.2.1/13d4b8370205d94fe7b59ccb54b44d5f2d31229d/org.apache.felix.framework-4.2.1.jar:/Users/nolan/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.17/5af35056b4d257e4b64b9e8069c0746e8b08629f/log4j-1.2.17.jar'
+-d '/Users/nolan/Desktop/workmeta/framework/build/docs/javadoc'
+-doctitle 'framework API'
+-quiet 
+-windowtitle 'framework API'
+'/Users/nolan/Desktop/workmeta/framework/src/main/java/com/cloudwise/smartagent/framework/AutoProcessor.java'
+'/Users/nolan/Desktop/workmeta/framework/src/main/java/com/cloudwise/smartagent/framework/Main.java'
